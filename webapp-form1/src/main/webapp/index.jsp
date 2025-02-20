@@ -13,11 +13,17 @@
     
       <div>
         <label for="username">Usuario</label>
-        <div><input type="text" name="username" id="username"></div>
+        <div><input type="text" name="username" id="username" required></div>
       </div>
       <div>
         <label for="password">Password</label>
-        <div><input type="password" name="password" id="password"></div>
+        <div><input type="password" name="password" id="password" required></div>
+      </div>
+      <div>
+        <label for="descripcion">Descripción</label>
+        <div>
+        <textarea name="descripcion" id="descripcion" rows="5" cols="40"></textarea>
+        </div>
       </div>
       <div>
         <label for="email">Email</label>

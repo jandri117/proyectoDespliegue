@@ -31,6 +31,7 @@ public class FormServlet extends HttpServlet {
                 String lenguajes[] = request.getParameterValues("lenguajes");
                 String roles[] = request.getParameterValues("roles");
                 String idioma = request.getParameter("idioma");
+                String descripcion = request.getParameter("descripcion");
                 //PARA CHECKBOX
                 String habilitar = request.getParameter("habilitar");
 
@@ -63,6 +64,14 @@ public class FormServlet extends HttpServlet {
            for (int i = 0; i < lenguajes.length; i++) {
             out.println("       <ul><li>"+ lenguajes[i] +"</li></ul>");  
            }
+            out.println("     <li> Roles:  </li>");
+              for (int i = 0; i < roles.length; i++) {
+                out.println("       <ul><li>"+ roles[i] +"</li></ul>");  
+               }
+            out.println("       <li> Idioma:"+idioma+" </li>");
+            out.println("       <li> Descripcion:"+descripcion+" </li>");
+            out.println("       <li> Habilitar:"+enabled+" </li>");
+            out.println("       <li> Secreto:"+secreto+" </li>");
            out.println("   </body>");
            out.println("</html>");
        }
